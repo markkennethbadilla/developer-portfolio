@@ -46,7 +46,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           <NavLink page="contact" label="Contact" />
           <Button
             size="sm"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1XxSLUWeNICT8jFe0dLuv6RjGbfaC0SL4/view?usp=sharing', '_blank')}
             variant="outline"
           >
             Resume
@@ -74,7 +74,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             <NavLink page="contact" label="Contact" />
             <Button
               size="sm"
-              onClick={() => window.open('/resume.pdf', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1XxSLUWeNICT8jFe0dLuv6RjGbfaC0SL4/view?usp=sharing', '_blank')}
               variant="outline"
               className="w-full"
             >

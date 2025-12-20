@@ -235,7 +235,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.open('https://drive.google.com/file/d/1tOUE2OYtforPEheoEjycTcW5KxhpquWg/view?usp=sharing', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1XxSLUWeNICT8jFe0dLuv6RjGbfaC0SL4/view?usp=sharing', '_blank')}
             className="w-full sm:w-auto"
           >
             View Resume
