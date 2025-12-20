@@ -21,7 +21,18 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    toast.success('Message sent! I\'ll get back to you within 24 hours.')
+    
+    const subject = encodeURIComponent(`Portfolio Contact: ${formData.name}${formData.company ? ` from ${formData.company}` : ''}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      (formData.company ? `Company: ${formData.company}\n` : '') +
+      `\nMessage:\n${formData.message}`
+    )
+    
+    window.location.href = `mailto:markkennethbadilla@gmail.com?subject=${subject}&body=${body}`
+    
+    toast.success('Opening your email client...')
     setFormData({ name: '', email: '', company: '', message: '' })
   }
 
