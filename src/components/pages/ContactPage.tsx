@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label'
 import { useState } from 'react'
 import { toast } from 'sonner'
 import { CheckCircle, Copy } from '@phosphor-icons/react'
+import resumePDF from '@/assets/documents/resume.pdf'
 
 interface ContactPageProps {
   onNavigate: (page: 'home' | 'case-study' | 'contact') => void
@@ -235,7 +236,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => window.open(resumePDF, '_blank')}
             className="w-full sm:w-auto"
           >
             Download Resume
