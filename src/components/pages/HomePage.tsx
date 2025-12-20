@@ -197,10 +197,10 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => window.open('https://portfolio--backupiammkb2002.github.app/resume.pdf', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1tOUE2OYtforPEheoEjycTcW5KxhpquWg/view?usp=sharing', '_blank')}
               className="w-full sm:w-auto"
             >
-              Download Resume
+              View Resume
             </Button>
           </div>
           <div className="flex flex-wrap gap-4 sm:gap-6 justify-center mt-6 sm:mt-8 text-sm">
