@@ -31,7 +31,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-border">
-      <div className="max-w-[1200px] mx-auto px-8 py-4 flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <button
           onClick={() => handleNavigate('home')}
           className="text-xl font-bold font-heading tracking-tight"
@@ -53,8 +53,9 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
         </div>
 
         <button
-          className="md:hidden"
+          className="md:hidden p-2 -mr-2 touch-manipulation"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
         >
           {mobileMenuOpen ? <X size={24} /> : <List size={24} />}
         </button>
@@ -62,7 +63,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
 
       {mobileMenuOpen && (
         <div className="md:hidden glass border-t border-border">
-          <div className="max-w-[1200px] mx-auto px-8 py-6 flex flex-col gap-4">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-6 flex flex-col gap-4">
             <NavLink page="home" label="Home" />
             <NavLink page="case-study" label="Case Study" />
             <NavLink page="contact" label="Contact" />
