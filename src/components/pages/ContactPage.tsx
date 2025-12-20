@@ -98,7 +98,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                     <span className="text-sm text-muted-foreground">Availability:</span>
                     <span className="font-semibold flex items-center gap-2">
                       <CheckCircle size={16} className="text-success" />
-                      Immediate
+                      Available to start soon
                     </span>
                   </div>
                   <div className="flex justify-between">
