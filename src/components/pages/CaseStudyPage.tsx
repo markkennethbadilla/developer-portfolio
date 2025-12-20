@@ -23,7 +23,7 @@ export default function CaseStudyPage({ onNavigate }: CaseStudyPageProps) {
           <h3 className="text-success mb-4">The Impact</h3>
           <p className="text-xl leading-relaxed mb-6">
             Eliminated <span className="font-bold text-success">100%</span> of negative inventory
-            bugs affecting 50+ enterprise clients. Zero data integrity issues in 8+ months of
+            bugs in production serving 50+ users. Zero data integrity issues in 8+ months of
             production use.
           </p>
 
@@ -209,7 +209,7 @@ if (stock >= quantity) {
                   <li className="flex items-start gap-3">
                     <CheckCircle size={24} className="text-success shrink-0 mt-0.5" />
                     <span>
-                      <span className="font-bold">50+ companies</span> protected from this entire
+                      <span className="font-bold">50+ users</span> protected from this entire
                       class of bug
                     </span>
                   </li>
@@ -305,7 +305,7 @@ if (stock >= quantity) {
                   <span className="text-primary font-bold">3.</span>
                   <span>
                     <span className="font-semibold">Production experience</span> — serving 50+
-                    paying clients
+                    users in production multi-tenant system
                   </span>
                 </li>
                 <li className="flex items-start gap-3">

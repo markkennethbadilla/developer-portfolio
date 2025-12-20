@@ -31,7 +31,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </p>
           <p className="text-xl leading-relaxed mb-8">
             I build multi-tenant systems that handle real money and real inventory without
-            breaking. Currently serving 50+ enterprise clients with zero data errors in 8+
+            breaking. Currently supporting 50+ users across 2 enterprise companies with zero data errors in 8+
             months.
           </p>
           <p className="text-lg text-muted-foreground">
@@ -66,8 +66,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             <div className="text-6xl mb-2">
               <AnimatedCounter value={50} suffix="+" />
             </div>
-            <p className="text-lg font-semibold mb-1">Enterprise clients</p>
-            <p className="text-sm text-muted-foreground">Multi-tenant SaaS serving daily</p>
+            <p className="text-lg font-semibold mb-1">Active users daily</p>
+            <p className="text-sm text-muted-foreground">Across 2 enterprise companies</p>
           </Card>
         </div>
       </section>
@@ -82,8 +82,8 @@ export default function HomePage({ onNavigate }: HomePageProps) {
               <h3>Multi-Tenant Data Isolation</h3>
             </div>
             <p className="mb-4 leading-relaxed">
-              Designed JWT-based authentication system enforcing strict tenant boundaries for 50+
-              enterprise clients. Zero cross-tenant data leaks in production.
+              Designed JWT-based authentication system enforcing strict tenant boundaries for multi-tenant
+              SaaS. Zero cross-tenant data leaks in production serving 50+ users.
             </p>
             <p className="text-success font-semibold">→ Result: 100% security compliance audits</p>
           </Card>
@@ -175,7 +175,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             Software Engineer at Hatchit Solutions (June 2025 - Present)
           </p>
           <p className="text-muted-foreground mb-2">
-            System in production: Serving 50+ enterprise clients daily
+            System in production: Serving 50+ users across 2 enterprise companies daily
           </p>
           <p className="text-sm text-muted-foreground">
             Certifications: PhilNITS FE · TOPCIT Level 3
@@ -188,7 +188,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           <h2 className="mb-6">See How I Solve Complex Problems</h2>
           <p className="text-lg text-muted-foreground mb-8">
             Deep dive into how I eliminated race conditions in a multi-tenant inventory system
-            serving 50+ enterprise clients.
+            serving 50+ users across multiple branches.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" onClick={() => onNavigate('case-study')} className="group">
