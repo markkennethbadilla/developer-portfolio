@@ -31,8 +31,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
           </p>
           <p className="text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8">
             I build multi-tenant systems that handle real money and real inventory without
-            breaking. Currently supporting 50+ users across 2 enterprise companies with zero data errors in 8+
-            months.
+            breaking. Currently supporting 50+ users across 2 enterprise companies—core inventory and financial modules maintain zero data errors in 8+ months of production.
           </p>
           <p className="text-base sm:text-lg text-muted-foreground">
             <span className="text-foreground font-semibold">Specialized in:</span> Concurrency ·

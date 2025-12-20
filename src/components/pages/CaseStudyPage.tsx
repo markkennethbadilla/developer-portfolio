@@ -23,8 +23,7 @@ export default function CaseStudyPage({ onNavigate }: CaseStudyPageProps) {
           <h3 className="text-success mb-3 sm:mb-4 text-lg sm:text-xl">The Impact</h3>
           <p className="text-lg sm:text-xl leading-relaxed mb-4 sm:mb-6">
             Eliminated <span className="font-bold text-success">100%</span> of negative inventory
-            bugs in production serving 50+ users. Zero data integrity issues in 8+ months of
-            production use.
+            bugs in production serving 50+ users. Core inventory system maintains zero race condition errors in 8+ months since fix deployment.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 sm:pt-6 border-t border-border">
