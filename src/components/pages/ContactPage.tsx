@@ -235,7 +235,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.open('/resume.pdf', '_blank')}
+            onClick={() => window.open('https://portfolio--backupiammkb2002.github.app/resume.pdf', '_blank')}
             className="w-full sm:w-auto"
           >
             Download Resume
