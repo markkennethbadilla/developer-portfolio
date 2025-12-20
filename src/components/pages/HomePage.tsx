@@ -12,7 +12,6 @@ import {
   CurrencyDollar,
   ArrowRight,
 } from '@phosphor-icons/react'
-import resumePDF from '@/assets/documents/resume.pdf'
 
 interface HomePageProps {
   onNavigate: (page: 'home' | 'case-study' | 'contact') => void
@@ -198,7 +197,7 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             <Button
               size="lg"
               variant="outline"
-              onClick={() => window.open(resumePDF, '_blank')}
+              onClick={() => window.open('/resume.pdf', '_blank')}
               className="w-full sm:w-auto"
             >
               Download Resume
