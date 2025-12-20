@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { List, X } from '@phosphor-icons/react'
 import { useState } from 'react'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
 
 type Page = 'home' | 'case-study' | 'contact'
 
@@ -50,15 +51,19 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
           >
             Resume
           </Button>
+          <ThemeSwitcher />
         </div>
 
-        <button
-          className="md:hidden p-2 -mr-2 touch-manipulation"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
-        >
-          {mobileMenuOpen ? <X size={24} /> : <List size={24} />}
-        </button>
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeSwitcher />
+          <button
+            className="p-2 -mr-2 touch-manipulation"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {mobileMenuOpen ? <X size={24} /> : <List size={24} />}
+          </button>
+        </div>
       </div>
 
       {mobileMenuOpen && (

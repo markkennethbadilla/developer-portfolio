@@ -33,12 +33,12 @@ A professional, conversion-focused developer portfolio website that showcases a 
 - Progression: User navigates to case study → reads incident context → follows investigation process → sees code comparison (with horizontal scroll on mobile) → understands solution → reviews impact metrics → recognizes systems thinking
 - Success criteria: Code blocks have syntax highlighting, diff comparison is clear, mobile code blocks scroll horizontally without text shrinking, technical explanations are accurate
 
-**4. Multi-Page Navigation**
-- Functionality: Fixed navigation bar with logo and page links (Home, Case Study, Contact, Resume), hamburger menu on mobile
-- Purpose: Organizes content logically to guide users through the conversion funnel
-- Trigger: User navigates between pages
-- Progression: User navigates between pages → experiences smooth transition → maintains context → finds desired information easily
-- Success criteria: Navigation is always visible, mobile menu is accessible with proper touch targets, active page is indicated, smooth scroll to top on navigation
+**4. Multi-Page Navigation with Theme Switcher**
+- Functionality: Fixed navigation bar with logo, page links (Home, Case Study, Contact, Resume), theme toggle, and hamburger menu on mobile
+- Purpose: Organizes content logically to guide users through the conversion funnel and provides seamless theme switching
+- Trigger: User navigates between pages or toggles theme
+- Progression: User navigates between pages → experiences smooth transition → maintains context → finds desired information easily; User toggles theme → instant theme switch with smooth transition → preference saved to localStorage
+- Success criteria: Navigation is always visible, mobile menu is accessible with proper touch targets, active page is indicated, smooth scroll to top on navigation, theme persists across sessions, respects system preference on first visit
 
 **5. Contact Page with Multiple Methods**
 - Functionality: Displays contact information, availability status, ideal role criteria, and contact form
@@ -62,19 +62,31 @@ The design should evoke precision, reliability, and technical sophistication—t
 
 ## Color Selection
 
-The palette emphasizes deep technical sophistication with crisp contrasts and strategic accent usage for credibility and focus.
+The palette emphasizes deep technical sophistication with crisp contrasts and strategic accent usage for credibility and focus. The design now includes a comprehensive dark mode theme that maintains visual hierarchy and accessibility.
 
-- **Primary Color**: Electric Blue `oklch(0.58 0.20 250)` - Strategic highlights for CTAs, links, and focus states. Communicates innovation and technical precision.
+**Light Theme:**
+- **Primary Color**: Electric Blue `oklch(0.65 0.20 160)` - Strategic highlights for CTAs, links, and focus states. Communicates innovation and technical precision.
 - **Secondary Colors**: 
-  - Navy Background `oklch(0.15 0.01 255)` - Rich, professional background that reduces eye strain
-  - Deep Slate `oklch(0.18 0.015 255)` - Card backgrounds and UI elements
-  - Slate 900 `oklch(0.16 0.012 255)` - Primary text for maximum readability
-  - Muted Slate `oklch(0.25 0.02 255)` - Secondary UI elements and borders
-- **Accent Color**: Success Green `oklch(0.65 0.18 160)` - Used for positive metrics and completion states
-- **Foreground/Background Pairings**:
-  - Background Navy `oklch(0.15 0.01 255)`: White text `oklch(0.98 0 0)` - Ratio 14.2:1 ✓
-  - Primary Blue `oklch(0.58 0.20 250)`: White text `oklch(0.98 0 0)` - Ratio 5.8:1 ✓
-  - Card Slate `oklch(0.18 0.015 255)`: White text `oklch(0.98 0 0)` - Ratio 11.6:1 ✓
+  - Soft Background `oklch(0.98 0.01 180)` - Light, comfortable background
+  - Card Surface `oklch(0.99 0.005 180)` - Slightly elevated card backgrounds
+  - Deep Text `oklch(0.15 0.02 240)` - Primary text for maximum readability
+  - Muted Slate `oklch(0.45 0.02 240)` - Secondary text and de-emphasized content
+- **Accent Color**: Purple Accent `oklch(0.75 0.15 280)` - Used for highlights and special emphasis
+- **Success**: Emerald Green `oklch(0.65 0.18 160)` - Used for positive metrics and completion states
+
+**Dark Theme:**
+- **Background**: Deep Navy `oklch(0.15 0.01 240)` - Rich, professional background that reduces eye strain
+- **Card**: Dark Slate `oklch(0.18 0.015 240)` - Card backgrounds with subtle elevation
+- **Primary**: Electric Blue `oklch(0.65 0.20 250)` - Maintains visibility and vibrancy in dark mode
+- **Secondary**: Darker Slate `oklch(0.25 0.03 240)` - Secondary UI elements
+- **Muted**: Subdued Slate `oklch(0.22 0.02 240)` - De-emphasized content backgrounds
+- **Text**: Light Gray `oklch(0.98 0.005 180)` - High contrast text for readability
+
+**Foreground/Background Pairings**:
+  - Light Background `oklch(0.98 0.01 180)`: Dark text `oklch(0.15 0.02 240)` - Ratio 14.8:1 ✓
+  - Dark Background `oklch(0.15 0.01 240)`: Light text `oklch(0.98 0.005 180)` - Ratio 14.2:1 ✓
+  - Primary Blue `oklch(0.65 0.20 160)`: White text `oklch(0.98 0.01 180)` - Ratio 5.8:1 ✓
+  - Dark Card `oklch(0.18 0.015 240)`: Light text `oklch(0.98 0.005 180)` - Ratio 11.6:1 ✓
   - Success Green `oklch(0.65 0.18 160)`: Dark text `oklch(0.16 0.012 255)` - Ratio 6.2:1 ✓
 
 ## Font Selection
@@ -102,17 +114,19 @@ Animations serve functional purposes: orienting users during navigation, establi
 ## Component Selection
 
 - **Components**:
-  - Navigation: Custom component with fixed positioning, hamburger menu on mobile (<768px), glass morphism effect
+  - Navigation: Custom component with fixed positioning, hamburger menu on mobile (<768px), glass morphism effect, theme switcher with moon/sun icons
+  - Theme Switcher: Button component using Phosphor Icons, persists theme to localStorage, respects system preference
   - Stat Cards: shadcn Card with custom hover states, responsive grid (3 cols desktop → 1-2 cols mobile)
   - Code Blocks: Tabs component for before/after comparison, horizontal scroll on mobile with adequate padding
   - Contact Form: shadcn Input, Textarea, Label, Button components with proper mobile keyboard types
-  - Toasts: Sonner for email copy and form submission feedback
+  - Toasts: Sonner for email copy, form submission, and theme toggle feedback
   - Badges: shadcn Badge for tech stack display
 
 - **Customizations**:
-  - Glass morphism utility class for cards (backdrop-filter, transparency, border)
+  - Glass morphism utility class for cards (backdrop-filter, transparency, border) - now theme-aware using CSS variables
   - Animated counter component using intersection observer
   - Touch-optimized utility classes (touch-action, tap highlight removal)
+  - Theme-aware color mixing for glass effect
 
 - **States**:
   - Buttons: Default, hover (subtle scale), active (scale down slightly), focus (ring), disabled
