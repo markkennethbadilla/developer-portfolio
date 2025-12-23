@@ -2,13 +2,10 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Link } from 'react-router-dom'
 import { ArrowRight, CheckCircle, XCircle } from '@phosphor-icons/react'
 
-interface CaseStudyPageProps {
-  onNavigate: (page: 'home' | 'case-study' | 'contact') => void
-}
-
-export default function CaseStudyPage({ onNavigate }: CaseStudyPageProps) {
+export default function CaseStudyPage() {
   return (
     <div className="pt-16 sm:pt-20">
       <section className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24">
@@ -353,15 +350,14 @@ if (stock >= quantity) {
             make your systems faster and more reliable.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button size="lg" onClick={() => onNavigate('contact')} className="group w-full sm:w-auto">
-              Get in Touch
-              <ArrowRight
-                size={20}
-                className="ml-2 group-hover:translate-x-1 transition-transform"
-              />
+            <Button size="lg" asChild className="group w-full sm:w-auto">
+              <Link to="/contact">
+                Let's Work Together
+                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" onClick={() => onNavigate('home')} className="w-full sm:w-auto">
-              Back to Home
+            <Button size="lg" variant="outline" asChild className="w-full sm:w-auto">
+              <Link to="/">Back to Home</Link>
             </Button>
           </div>
         </Card>

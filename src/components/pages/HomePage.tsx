@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import AnimatedCounter from '@/components/AnimatedCounter'
+import { Link } from 'react-router-dom'
 import {
   Lightning,
   ShieldCheck,
@@ -13,11 +14,7 @@ import {
   ArrowRight,
 } from '@phosphor-icons/react'
 
-interface HomePageProps {
-  onNavigate: (page: 'home' | 'case-study' | 'contact') => void
-}
-
-export default function HomePage({ onNavigate }: HomePageProps) {
+export default function HomePage() {
   return (
     <div className="pt-16 sm:pt-20">
       <section className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-24">
@@ -190,9 +187,11 @@ export default function HomePage({ onNavigate }: HomePageProps) {
             serving 50+ users across multiple branches.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Button size="lg" onClick={() => onNavigate('case-study')} className="group w-full sm:w-auto">
-              View Case Study
-              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" asChild className="group w-full sm:w-auto">
+              <Link to="/case-study">
+                View Case Study
+                <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
             <Button
               size="lg"

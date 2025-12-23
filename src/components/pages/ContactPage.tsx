@@ -4,14 +4,11 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Label } from '@/components/ui/label'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { toast } from 'sonner'
 import { CheckCircle, Copy } from '@phosphor-icons/react'
 
-interface ContactPageProps {
-  onNavigate: (page: 'home' | 'case-study' | 'contact') => void
-}
-
-export default function ContactPage({ onNavigate }: ContactPageProps) {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -237,11 +234,11 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
 
       <section className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <Button size="lg" variant="outline" onClick={() => onNavigate('home')} className="w-full sm:w-auto">
-            Back to Home
+          <Button size="lg" variant="outline" asChild className="w-full sm:w-auto">
+            <Link to="/">Back to Home</Link>
           </Button>
-          <Button size="lg" variant="outline" onClick={() => onNavigate('case-study')} className="w-full sm:w-auto">
-            View Case Study
+          <Button size="lg" variant="outline" asChild className="w-full sm:w-auto">
+            <Link to="/case-study">View Case Study</Link>
           </Button>
           <Button
             size="lg"
