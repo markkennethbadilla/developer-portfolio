@@ -45,7 +45,7 @@ export default function Navigation() {
           <NavLink to="/contact" label="Contact" />
           <Button
             size="sm"
-            onClick={() => window.open('https://drive.google.com/file/d/1XxSLUWeNICT8jFe0dLuv6RjGbfaC0SL4/view?usp=sharing', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1GVX8nTmYsCNC3v9KIsSzsjOwdKgIi-v1/view?usp=sharing', '_blank')}
             variant="outline"
           >
             Resume
@@ -73,7 +73,7 @@ export default function Navigation() {
             <NavLink to="/contact" label="Contact" />
             <Button
               size="sm"
-              onClick={() => window.open('https://drive.google.com/file/d/1XxSLUWeNICT8jFe0dLuv6RjGbfaC0SL4/view?usp=sharing', '_blank')}
+              onClick={() => window.open('https://drive.google.com/file/d/1GVX8nTmYsCNC3v9KIsSzsjOwdKgIi-v1/view?usp=sharing', '_blank')}
               variant="outline"
               className="w-full"
             >

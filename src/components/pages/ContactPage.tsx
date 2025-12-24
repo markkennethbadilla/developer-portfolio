@@ -243,7 +243,7 @@ export default function ContactPage() {
           <Button
             size="lg"
             variant="outline"
-            onClick={() => window.open('https://drive.google.com/file/d/1XxSLUWeNICT8jFe0dLuv6RjGbfaC0SL4/view?usp=sharing', '_blank')}
+            onClick={() => window.open('https://drive.google.com/file/d/1GVX8nTmYsCNC3v9KIsSzsjOwdKgIi-v1/view?usp=sharing', '_blank')}
             className="w-full sm:w-auto"
           >
             View Resume
