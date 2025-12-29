@@ -20,7 +20,7 @@ export default function CaseStudyPage() {
           <h3 className="text-success mb-3 sm:mb-4 text-lg sm:text-xl">The Impact</h3>
           <p className="text-lg sm:text-xl leading-relaxed mb-4 sm:mb-6">
             Eliminated <span className="font-bold text-success">100%</span> of negative inventory
-            bugs in production serving 50+ users. Core inventory system maintains zero race condition errors in 8+ months since fix deployment.
+            bugs in production serving 50+ users. Core inventory system maintains zero race condition errors in 12+ months since fix deployment.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 sm:pt-6 border-t border-border">
@@ -198,7 +198,7 @@ if (stock >= quantity) {
                   <li className="flex items-start gap-2 sm:gap-3">
                     <CheckCircle size={20} className="text-success shrink-0 mt-0.5 sm:w-6 sm:h-6" />
                     <span>
-                      <span className="font-bold">Zero data integrity issues</span> in 8+ months of
+                      <span className="font-bold">Zero data integrity issues</span> in 12+ months of
                       production
                     </span>
                   </li>

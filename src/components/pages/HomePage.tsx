@@ -28,7 +28,7 @@ export default function HomePage() {
           </p>
           <p className="text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8">
             I build multi-tenant systems that handle real money and real inventory without
-            breaking. Currently supporting 50+ users across 2 enterprise companies—core inventory and financial modules maintain zero data errors in 8+ months of production.
+            breaking. Currently supporting 50+ users across 2 enterprise companies—core inventory and financial modules maintain zero data errors in 12+ months of production.
           </p>
           <p className="text-base sm:text-lg text-muted-foreground">
             <span className="text-foreground font-semibold">Specialized in:</span> Concurrency ·
@@ -106,7 +106,7 @@ export default function HomePage() {
               Implemented atomic database operations with transaction wrapping.
             </p>
             <p className="text-success font-semibold text-sm sm:text-base">
-              → Result: 100% bug elimination, 8+ months stable
+              → Result: 100% bug elimination, 12+ months stable
             </p>
           </Card>
 
@@ -168,7 +168,7 @@ export default function HomePage() {
         <Card className="glass p-8 sm:p-12 text-center">
           <p className="text-sm text-muted-foreground mb-2">CURRENTLY</p>
           <p className="text-lg sm:text-xl font-semibold mb-4">
-            Software Engineer at Hatchit Solutions (June 2025 - Present)
+            Software Engineer at Hatchit Solutions (January 2025 - Present)
           </p>
           <p className="text-muted-foreground mb-2 text-sm sm:text-base">
             System in production: Serving 50+ users across 2 enterprise companies daily
