@@ -21,17 +21,17 @@ export default function HomePage() {
         <div className="max-w-3xl">
           <h1 className="text-balance mb-4 sm:mb-6 text-3xl sm:text-4xl md:text-5xl">Mark Kenneth Badilla</h1>
           <p className="text-xl sm:text-2xl text-primary font-semibold mb-3 sm:mb-4">
-            Software Engineer | Backend-Leaning Fullstack
+            Software Engineer | Backend-Heavy Fullstack
           </p>
           <p className="text-muted-foreground mb-4 sm:mb-6 text-base sm:text-lg">
-            Metro Cebu, Philippines · Open to Remote (US/EU/APAC)
+            Metro Cebu, Philippines · Remote Ready
           </p>
           <p className="text-lg sm:text-xl leading-relaxed mb-6 sm:mb-8">
-            I build multi-tenant systems that handle real money and real inventory without
-            breaking. Currently supporting 50+ users across 2 enterprise companies—core inventory and financial modules maintain zero data errors in 12+ months of production.
+            I build systems that handle real money. If they break, people lose cash. Mine don't break.
+            Currently maintaining core inventory modules for enterprise ERPs. Zero data errors in production.
           </p>
           <p className="text-base sm:text-lg text-muted-foreground">
-            <span className="text-foreground font-semibold">Specialized in:</span> Concurrency ·
+            <span className="text-foreground font-semibold">The toolkit:</span> Concurrency ·
             Financial Accuracy · Multi-Tenant Security
           </p>
         </div>
@@ -60,10 +60,10 @@ export default function HomePage() {
           <Card className="glass p-6 sm:p-8 transition-all duration-200 hover:translate-y-[-4px] hover:shadow-xl hover:shadow-primary/10 sm:col-span-2 lg:col-span-1">
             <Buildings size={40} className="text-primary mb-3 sm:mb-4" weight="duotone" />
             <div className="text-5xl sm:text-6xl mb-2 font-mono">
-              <AnimatedCounter value={50} suffix="+" />
+              <AnimatedCounter value={2} suffix="+" />
             </div>
-            <p className="text-base sm:text-lg font-semibold mb-1">Active users daily</p>
-            <p className="text-sm text-muted-foreground">Across 2 enterprise companies</p>
+            <p className="text-base sm:text-lg font-semibold mb-1">Enterprise Clients</p>
+            <p className="text-sm text-muted-foreground">Running daily operations</p>
           </Card>
         </div>
       </section>
@@ -78,10 +78,10 @@ export default function HomePage() {
               <h3 className="text-lg sm:text-xl">Multi-Tenant Data Isolation</h3>
             </div>
             <p className="mb-4 leading-relaxed text-sm sm:text-base">
-              Designed JWT-based authentication system enforcing strict tenant boundaries for multi-tenant
-              SaaS. Zero cross-tenant data leaks in production serving 50+ users.
+              Designed JWT-based authentication enforcing strict tenant boundaries. 
+              Zero cross-tenant leaks. If you're not in the org, you don't see the data. Period.
             </p>
-            <p className="text-success font-semibold text-sm sm:text-base">→ Result: 100% security compliance audits</p>
+            <p className="text-success font-semibold text-sm sm:text-base">→ Result: 100% security compliance</p>
           </Card>
 
           <Card className="glass p-6 sm:p-8">
@@ -90,8 +90,8 @@ export default function HomePage() {
               <h3 className="text-lg sm:text-xl">Performance Under Load</h3>
             </div>
             <p className="mb-4 leading-relaxed text-sm sm:text-base">
-              Eliminated N+1 queries in inventory reporting. Reduced page load from 5+ seconds to
-              300ms for companies with 1,000+ SKUs across 20+ branches.
+              Killed N+1 queries in inventory reporting. Dropped page loads from 5s to 300ms 
+              for heavy datasets. The database breathes easier now.
             </p>
             <p className="text-success font-semibold text-sm sm:text-base">→ Result: 94% latency reduction</p>
           </Card>
@@ -102,11 +102,11 @@ export default function HomePage() {
               <h3 className="text-lg sm:text-xl">Concurrency & Race Conditions</h3>
             </div>
             <p className="mb-4 leading-relaxed text-sm sm:text-base">
-              Fixed TOCTOU race condition causing negative inventory in high-traffic sales.
-              Implemented atomic database operations with transaction wrapping.
+              Fixed TOCTOU race conditions that caused negative inventory. 
+              Implemented atomic DB operations. No more "ghost" stock.
             </p>
             <p className="text-success font-semibold text-sm sm:text-base">
-              → Result: 100% bug elimination, 12+ months stable
+              → Result: 100% bug elimination
             </p>
           </Card>
 
@@ -116,11 +116,11 @@ export default function HomePage() {
               <h3 className="text-lg sm:text-xl">Financial Accuracy</h3>
             </div>
             <p className="mb-4 leading-relaxed text-sm sm:text-base">
-              Standardized decimal precision across frontend/backend using decimal.js. Reconciled
-              23 invoice discrepancies caused by floating-point errors.
+              Standardized decimal precision across the stack. Floating point math is a trap; 
+              I replaced it with arbitrary-precision libraries.
             </p>
             <p className="text-success font-semibold text-sm sm:text-base">
-              → Result: 100% calculation parity between systems
+              → Result: 100% calculation parity
             </p>
           </Card>
         </div>
@@ -171,7 +171,7 @@ export default function HomePage() {
             Software Engineer at Hatchit Solutions (January 2025 - Present)
           </p>
           <p className="text-muted-foreground mb-2 text-sm sm:text-base">
-            System in production: Serving 50+ users across 2 enterprise companies daily
+            System in production: Serving enterprise clients daily
           </p>
           <p className="text-sm text-muted-foreground">
             Certifications: PhilNITS FE · TOPCIT Level 3
@@ -183,8 +183,7 @@ export default function HomePage() {
         <div className="text-center max-w-2xl mx-auto">
           <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl">See How I Solve Complex Problems</h2>
           <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8">
-            Deep dive into how I eliminated race conditions in a multi-tenant inventory system
-            serving 50+ users across multiple branches.
+            Deep dive into how I eliminated race conditions in a multi-tenant inventory system.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button size="lg" asChild className="group w-full sm:w-auto">

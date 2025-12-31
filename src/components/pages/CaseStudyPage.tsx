@@ -20,13 +20,13 @@ export default function CaseStudyPage() {
           <h3 className="text-success mb-3 sm:mb-4 text-lg sm:text-xl">The Impact</h3>
           <p className="text-lg sm:text-xl leading-relaxed mb-4 sm:mb-6">
             Eliminated <span className="font-bold text-success">100%</span> of negative inventory
-            bugs in production serving 50+ users. Core inventory system maintains zero race condition errors in 12+ months since fix deployment.
+            bugs in production. Core inventory system maintains zero race condition errors in 12+ months since fix deployment.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4 sm:pt-6 border-t border-border">
             <div>
               <p className="text-xs sm:text-sm text-muted-foreground mb-1">PROJECT</p>
-              <p className="font-semibold text-sm sm:text-base">Digits (Multi-Company ERP)</p>
+              <p className="font-semibold text-sm sm:text-base">Enterprise Inventory System</p>
             </div>
             <div>
               <p className="text-xs sm:text-sm text-muted-foreground mb-1">ROLE</p>
@@ -51,9 +51,8 @@ export default function CaseStudyPage() {
               <Card className="glass p-6 sm:p-8">
                 <h3 className="text-destructive mb-3 sm:mb-4 text-lg sm:text-xl">The Incident</h3>
                 <p className="leading-relaxed text-sm sm:text-base">
-                  Finance flagged 12 inventory records with impossible negative quantities in a
-                  single month. Money was being lost. Customers were confused. Our reputation was
-                  at risk.
+                  Accounting flagged inventory records with impossible negative quantities. 
+                  Money was being lost. Customers were confused. Our reputation was at risk.
                 </p>
               </Card>
 
@@ -140,20 +139,20 @@ if (stock >= quantity) {
                       <pre className="bg-card/50 p-4 sm:p-6 rounded-lg border-l-4 border-success overflow-x-auto">
                         <code className="text-xs sm:text-sm font-mono text-foreground/90">{`await prisma.$transaction(async (tx) => {
   // Validate first
-  if (inventory.on_hand_quantity.lessThan(quantity)) {
+  if (product_stock.available_qty.lessThan(quantity)) {
     throw new Error('Insufficient stock')
   }
   
   // ✓ Atomic decrement - check and update in ONE operation
-  await tx.inventory.update({
+  await tx.product_stock.update({
     where: { id },
     data: { 
-      on_hand_quantity: { decrement: quantity } 
+      available_qty: { decrement: quantity } 
     }
   })
   
   // Audit trail
-  await tx.inventoryMovement.create({ data: {...} })
+  await tx.stock_audit_log.create({ data: {...} })
 })`}</code>
                       </pre>
                     </div>
@@ -205,7 +204,7 @@ if (stock >= quantity) {
                   <li className="flex items-start gap-2 sm:gap-3">
                     <CheckCircle size={20} className="text-success shrink-0 mt-0.5 sm:w-6 sm:h-6" />
                     <span>
-                      <span className="font-bold">50+ users</span> protected from this entire
+                      <span className="font-bold">Enterprise users</span> protected from this entire
                       class of bug
                     </span>
                   </li>
@@ -231,7 +230,7 @@ if (stock >= quantity) {
                   <li className="flex items-start gap-2 sm:gap-3">
                     <span className="text-primary">→</span>
                     <span>
-                      Pattern documented and adopted across all 50+ services
+                      Pattern documented and adopted across all microservices
                     </span>
                   </li>
                   <li className="flex items-start gap-2 sm:gap-3">
