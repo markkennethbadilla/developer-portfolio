@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+@import "tw-animate-css";
+@custom-variant dark (
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@config '../tailwind.config.js';
+
+@layer base {
+  *,
+}
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+  }
+  @
+ 
+
+      height: 0
+  }
+
+
+  }
+  body {
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
